@@ -9,6 +9,7 @@ import Playlist from '@/pages/discover/c-pages/playlist'
 import Djradio from '@/pages/discover/c-pages/djradio'
 import Artist from '@/pages/discover/c-pages/artist'
 import Album from '@/pages/discover/c-pages/album'
+import Song from '@/pages/player'
 
 const routes = [
     {
@@ -62,6 +63,10 @@ const routes = [
     {
         path:'/friends',
         component:Friends
+    },
+    {
+        path:'/song',
+        component:Song
     }
 ]
 
