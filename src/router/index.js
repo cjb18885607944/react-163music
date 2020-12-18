@@ -1,15 +1,16 @@
 import React from 'react'
-import Discover from '@/pages/discover'
-import Mine from '@/pages/mine'
-import Friends from '@/pages/friends'
 import { Redirect } from 'react-router-dom'
-import Recommend from '@/pages/discover/c-pages/recommend'
-import Toplist from '@/pages/discover/c-pages/toplist'
-import Playlist from '@/pages/discover/c-pages/playlist'
-import Djradio from '@/pages/discover/c-pages/djradio'
-import Artist from '@/pages/discover/c-pages/artist'
-import Album from '@/pages/discover/c-pages/album'
-import Song from '@/pages/player'
+
+const Discover = React.lazy(() => import('@/pages/discover'))
+const Mine = React.lazy(() => import('@/pages/mine'))
+const Friends = React.lazy(() => import('@/pages/friends'))
+const Recommend = React.lazy(() => import('@/pages/discover/c-pages/recommend'))
+const Toplist = React.lazy(() => import('@/pages/discover/c-pages/toplist'))
+const Playlist = React.lazy(() => import('@/pages/discover/c-pages/playlist'))
+const Djradio = React.lazy(() => import('@/pages/discover/c-pages/djradio'))
+const Artist = React.lazy(() => import('@/pages/discover/c-pages/artist'))
+const Album = React.lazy(() => import('@/pages/discover/c-pages/album'))
+const Song = React.lazy(() => import('@/pages/player'))
 
 const routes = [
     {
@@ -35,6 +36,10 @@ const routes = [
                 component:Recommend
             },
             {
+                path:'/discover/toplist/:id',
+                component:Toplist
+            },
+            {
                 path:'/discover/toplist',
                 component:Toplist
             },
@@ -54,6 +59,10 @@ const routes = [
                 path:'/discover/album',
                 component:Album
             },
+            {
+                path:'/discover/song/:id',
+                component:Song
+            }
         ]
     },
     {
@@ -64,10 +73,6 @@ const routes = [
         path:'/friends',
         component:Friends
     },
-    {
-        path:'/song',
-        component:Song
-    }
 ]
 
 export default routes

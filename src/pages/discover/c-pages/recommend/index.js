@@ -11,7 +11,6 @@ import HotRecommend from './components/hot-recommend'
 import NewAlbum from './components/new-album'
 import Ranking from './components/ranking'
 import UserLogin from './components/user-login'
-import HotAnchor from './components/hot-anchor'
 import SettleSinger from './components/settle-singer'
 
 function Recommend(props) {
@@ -28,7 +27,6 @@ function Recommend(props) {
           <RecommendRight>
             <UserLogin/>
             <SettleSinger/>
-            <HotAnchor/>
           </RecommendRight>
       </Content>
     </RecommendWrapper>

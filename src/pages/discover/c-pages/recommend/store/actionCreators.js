@@ -37,6 +37,8 @@ export const getNewAlbumAction = (limit) => {
     }
 }
 
+
+
 const  changeUpRankingAction = res => ({
     type:actionTypes.RECOMMEND_UP_RANKING,
     upRanking:res

@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import {Provider} from 'react-redux'
 import {renderRoutes} from 'react-router-config'
 
@@ -14,7 +15,9 @@ function App() {
     <Provider store={store}>
       <HashRouter>
         <AppHeader/>
-        {renderRoutes(routes)}
+        <Suspense fallback={<div>加载中...</div>}>
+          {renderRoutes(routes)}
+        </Suspense>
         <AppFooter/>
         <AppPlayerBar/>
       </HashRouter>

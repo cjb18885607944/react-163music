@@ -44,3 +44,13 @@ export function getArtist(limit,cat){
         }
     })
 }
+// 获取热门歌手
+export function getHotArtist(limit){
+    return request({
+        url:'/top/artists',
+        params:{
+            offset:0,
+            limit
+        }
+    })
+}

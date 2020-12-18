@@ -189,9 +189,9 @@ export const Operator = styled.div`
         background-position: ${props => {
           switch(props.sequence) {
             case 1:
-              return "-96px -248px"
+              return "-93px -248px"
             case 2:
-              return "-96px -344px"
+              return "-93px -344px"
             default:
               return "-33px -344px"
           }
@@ -202,8 +202,14 @@ export const Operator = styled.div`
     .playlist {
       width: 59px;
       background-position: -42px -68px;
+      text-align:right;
+      padding-right:20px;
+      color:#666;
+      vertical-align:top;
+      line-height: 25px;
       &:hover{
-        background-position-y:-98px
+        background-position-y:-98px;
+        color:#fff;
       }
     }
   }

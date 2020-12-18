@@ -96,6 +96,13 @@ body, textarea, select, input, button {
   background: url(../img/sprite_table.png) no-repeat 0 9999px;
 }
 
+.playside_bg{
+  background: url(../img/playlist_bg.png) no-repeat 0 9999px;
+}
+.playside_bg_title{
+  background: url(../img/playlist_bg_8.png) no-repeat 0 9999px;
+}
+
 .image_cover {
   position: absolute;
   left: 0;
