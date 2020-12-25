@@ -44,7 +44,7 @@ function Toplist(props) {
                             return(
                                 <NavLink to={"/discover/toplist/"+item.id}>
                                     <div className={item.id ===rankListId ? "title-item active" : "title-item"}>
-                                        <img src={getSizeImage(item.coverImgUrl,40)}></img>
+                                        <img src={getSizeImage(item.coverImgUrl,40)}  alt=""></img>
                                         <div className="info">
                                             <div className="title">{item.name}</div>
                                             <div className="desc">{item.updateFrequency}</div>
@@ -62,7 +62,7 @@ function Toplist(props) {
                             return(
                                 <NavLink to={"/discover/toplist/"+item.id}>
                                     <div className="title-item">
-                                        <img src={getSizeImage(item.coverImgUrl,40)}></img>
+                                        <img src={getSizeImage(item.coverImgUrl,40)} alt=""></img>
                                         <div className="info">
                                             <div className="title">{item.name}</div>
                                             <div className="desc">{item.updateFrequency}</div>
@@ -78,7 +78,7 @@ function Toplist(props) {
             <RankWrapRight>
                 <div className="rank-info">
                     <div className="img-box">
-                        <img src={getSizeImage(rankDetailList.coverImgUrl,150)}/>
+                        <img src={getSizeImage(rankDetailList.coverImgUrl,150)}  alt=""/>
                         <span className="sprite_covor mask"></span>
                     </div>
                     <div className="detail-info">

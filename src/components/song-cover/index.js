@@ -10,7 +10,7 @@ export default memo(function SongsCover(props) {
   return (
     <SongsCoverWrapper>
       <div className="cover-top">
-        <img src={getSizeImage(info.picUrl, 140)} alt="" />
+        <img src={getSizeImage(info.picUrl || info.coverImgUrl, 140)} alt="" />
         <div className="cover sprite_covor">
           <div className="info sprite_covor">
             <span>
