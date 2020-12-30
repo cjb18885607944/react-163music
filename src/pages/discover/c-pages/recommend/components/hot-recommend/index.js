@@ -4,6 +4,7 @@ import {getHotRecommendsAction} from '../../store/actionCreators'
 import {RecommendWrapper} from './style'
 import RecommendThemeHeader from '@/components/recommend-theme-header'
 import SongsCover from '@/components/song-cover'
+import { NavLink } from 'react-router-dom'
 
 function HotRecommend() {
 
@@ -22,7 +23,11 @@ function HotRecommend() {
             <div className="recommend-list">
                 {
                     hotRecommends.map((item,index) => {
-                        return <SongsCover info={item} key={index}/>
+                        return (
+                                <NavLink to={"/playlist-detail/"+item.id}>
+                                    <SongsCover info={item} key={index}/>
+                                </NavLink>
+                            )
                     })
                 }
             </div>

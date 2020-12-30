@@ -15,7 +15,7 @@ import {columns} from './column'
 function Toplist(props) {
 
     // 获取路由id
-    const rankListId = props.match.params.id || 19723756
+    let rankListId = props.match.params.id || 19723756
     console.log(props.match.params.id,rankListId);
     //react hook
     const [rankTitleList,setRankTitleList] = useState([])
@@ -33,7 +33,6 @@ function Toplist(props) {
             setRankDetailList(res.playlist)
         })
     },[rankListId])
-    
     return (
         <RankWrapper className="wrap-v2">
             <RankWrapLeft>
@@ -43,7 +42,8 @@ function Toplist(props) {
                         if(index<4){
                             return(
                                 <NavLink to={"/discover/toplist/"+item.id}>
-                                    <div className={item.id ===rankListId ? "title-item active" : "title-item"}>
+                                    <div className={item.id ===rankListId ? "title-item active" : "title-item"}
+                                         onClick={e => rankListId = item.id}>
                                         <img src={getSizeImage(item.coverImgUrl,40)}  alt=""></img>
                                         <div className="info">
                                             <div className="title">{item.name}</div>

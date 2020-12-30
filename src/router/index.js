@@ -11,6 +11,7 @@ const Djradio = React.lazy(() => import('@/pages/discover/c-pages/djradio'))
 const Artist = React.lazy(() => import('@/pages/discover/c-pages/artist'))
 const Album = React.lazy(() => import('@/pages/discover/c-pages/album'))
 const Song = React.lazy(() => import('@/pages/player'))
+const Platlistdetail = React.lazy(() => import('@/components/play-list-detail'))
 
 const routes = [
     {
@@ -73,6 +74,10 @@ const routes = [
         path:'/friends',
         component:Friends
     },
+    {
+        path:'/playlist-detail/:id',
+        component:Platlistdetail
+    }
 ]
 
 export default routes

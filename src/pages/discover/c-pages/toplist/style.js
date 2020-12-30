@@ -36,6 +36,9 @@ export const RankWrapLeft = styled.div`
         &:hover{
             background-color: #f4f2f2;
         }
+        &.active{
+            background-color:#e6e6e6;
+        }
     }
     .active>.title-item{
         background-color:#e6e6e6;

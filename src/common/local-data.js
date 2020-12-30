@@ -72,7 +72,7 @@ export const dicoverMenu = [
   },
   {
     title: "排行榜",
-    link: "/discover/toplist"
+    link: "/discover/toplist/19723756"
   },
   {
     title: "歌单",

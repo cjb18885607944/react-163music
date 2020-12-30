@@ -183,6 +183,7 @@ export const PlayerRight = styled.div`
         color:#999;
         font-size:16px;
         &>*{
+          cursor: pointer;
           margin-right:10px;
         }
       }
